@@ -11,4 +11,11 @@ public class FactorialServiceTests
 
         Assert.Equal(1, res);
     }
+    [Fact]
+    public void TestNegative()
+    {
+           Assert.Throws<InvalidOperationException>(()=>{
+        var res = FactorialService.factorial(-1);
+        });
+    }
 }
